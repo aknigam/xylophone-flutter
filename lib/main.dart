@@ -9,16 +9,15 @@ class XylophoneApp extends StatelessWidget {
     player.play('note$track.wav');
   }
 
-  Widget buildKey({int track, Color color}) {
-    return Expanded(
-      child: FlatButton(
-        color: color,
-        onPressed: () {
-          playSound(track: track);
-        },
-      ),
-    );
-  }
+//https://freesound.org/
+  Widget buildKey({int track, Color color}) => Expanded(
+        child: FlatButton(
+          color: color,
+          onPressed: () {
+            playSound(track: track);
+          },
+        ),
+      );
 
   @override
   Widget build(BuildContext context) {
